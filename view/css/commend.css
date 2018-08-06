@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0
+}
+body{
+    background-color: #FFE4C4	;
+}
+.navt{
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 150px;
+    background-color: #FF7F00;
+}
+.nav-inp1{
+    margin-top: 60px;
+    width: 80%;
+    height: 35px;
+    border-radius: 8px;
+}
+.nav-inp2{
+    margin-top: 60px;
+    width: 15%;
+    height: 35px;
+    border-radius: 10px;
+    background-color:#FFDEAD;
+}
+/* 以上是顶部搜索框 */
+
+
+.con{
+     margin-top: 180px;
+    font-size: 16px;
+    /* background-color: #fff; */
+    color: black;
+
+}
+
+/* 以上是导航条部分 */
+
+
+
+#container,#div {
+    width: 900px;
+    height: 500px;
+    position: relative;
+    margin: 80px auto;
+}
+
+.imglist {
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.imglist li {
+    list-style: none;
+    width:600px;
+    height: 600px;
+}
+
+.btnlist {
+    width: 900px;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.btnlist li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: darkorange;
+    display: inline-block;
+}
+.pictur{
+    width: 900px;
+    height: 600px;
+}
+.lunbo{
+    margin-left: 50px;
+}
+/* 以上是轮播图部分 */
+
+.thum{
+    overflow: hidden;
+}
+.thum img{
+    transition: all 0.6s
+}
+.thum img:hover{
+    transform: scale(1.1);
+}
+.pict{
+    margin-top: 50px;
+}
+/* 以上是缩略图部分 */

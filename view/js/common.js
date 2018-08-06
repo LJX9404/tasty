@@ -2,8 +2,11 @@ window.onload = function () {
     reg();
     login();
     loginhover();
-    reghover()
+    reghover();
+    image();
 }
+
+
 function login() {
     //客户端格式验证
     $('#btn1').click(function () {
@@ -63,6 +66,7 @@ function login() {
 
     });
 }
+// 登录验证
 function reg() {
     $('#btn2').click(function () {
         //标记错误信息
@@ -108,7 +112,7 @@ function reg() {
             success: function (data) {
                 console.log(data);
                 if (data.r == 'success') {
-                    window.location.href = './login.html';
+                    window.location.href = './new.html';
                     //跳转到主页面
                 }else if(data.r == 'username_existed'){
                     $('.span3').css('display', 'block');
@@ -126,6 +130,9 @@ function reg() {
         });
     });
 }
+// 注册验证
+
+
 function loginhover(){
     $("#logininfo").click(function (){  
         // console.log('点击成功');
@@ -140,3 +147,33 @@ function reghover(){
         $(".login").hide();
     }) 
 }
+// 登录验证时的点击事件
+
+
+
+    function image(selector, time) {
+        var that=this;
+        that.time=time||1000;
+        that.show=1;
+        that.imglist = document.querySelectorAll(selector + ' .imglist li');
+        that.btnlist = document.querySelectorAll(selector + ' .btnlist li');
+        for (var i = 0; i < that.btnlist.length; i++) {
+            that.btnlist[i].onclick = (function (ind) {
+                return function () {
+                    for (var index = 0; index < that.imglist.length; index++) {
+                        that.imglist[index].style.display = "none";
+                    }
+                    that.show=ind;
+                    that.imglist[ind].style.display = 'block';
+                }
+            })(i);
+        }
+    }
+    image.prototype.autoplay=function(){
+        var that=this;
+        setInterval(function(){
+            that.btnlist[(++that.show)%that.imglist.length].onclick();
+        },that.time)
+    }
+   
+new  image('#container',1500).autoplay();

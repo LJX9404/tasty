@@ -3,7 +3,8 @@
     padding: 0
 }
 body{
-    background: url(../img/bc.jpg)
+    background: url(../img/bc.jpg);
+    background-color: #FFF68F;
 }
 .inputk{
     width: 300px;
