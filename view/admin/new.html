@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>new</title>
+
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/common.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 col-sm-4  "></div>
+            <div class="col-xs-4 col-sm-4  content1">
+                <ul>
+                    <li id="logininfo">登录</li>
+                    <li id="reginfo">注册</li>
+                </ul>
+                <div class='content2'>
+
+                    <!-- 登录开始 -->
+
+                    <div class="login">
+                        <form action="" id="loginform">
+                            <input type="text" name="username" id="username" class=" input1" placeholder="请输入账号">
+
+                            <span class="span1">账号格式不正确!</span>
+                            <span class="span3">账号不存在,请先注册!</span>
+                            <br>
+                            <input type="password" name="password" id="password" class=" input1" placeholder="请输入密码">
+
+                            <span class="span2">密码格式不正确!</span>
+                            <span class="span4">密码错误!</span>
+                            <br>
+                            <input type="button" name="btn1" id="btn1" class=" btn1" placeholder="登录" value="登录">
+
+                        </form>
+                    </div>
+                    <!-- 登录结尾 -->
+
+                    <!-- 注册开始 -->
+                    <div class="reg">
+                        <form action="" id="regform">
+                                <input type="text" name="username1" id="username1" class=" input2" placeholder="昵称">
+                                <span class="span1">账号格式不正确!</span>
+                                <span class="span3">该账号已存在!</span>
+                                <br>
+
+                                <input type="password" name="password1" id="password1" class=" input2" placeholder="请输入密码">
+                                <span class="span2">密码格式不正确!</span>
+                                <span class="span4">密码错误!</span>
+                                <br>
+
+                                <input type="text" name="tel" id="tel" class=" input2" placeholder="请输入手机号">
+                                <span class="span5">手机号格式不正确!</span>
+                    
+                                <br>
+
+                                <input type="button" name="btn2" id="btn2" class=" btn2" placeholder="注册" value="注册">
+
+                        </form>
+                    </div>
+
+                    <!-- 注册结尾 -->
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4  "></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
